@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="bundle.js"></script>
+  <title>Tamagotchi</title>
+</head>
+<body>
+  <div class = "container">
+    <div id="blockImg">
+      <img src = "" class = "pet" id = "pet" alt = "pika">
+    </div>
+    <br/>
+    <div class="progress">
+  <div id="healthbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100"
+  aria-valuemin="0" aria-valuemax="100" style="width:100%">
+    Health
+  </div>
+</div>
+<h1 id="message"></h1>
+<br/>
+<div class="progress">
+  <div id="poobar" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+  aria-valuemin="0" aria-valuemax="100" style="width:0%">
+    Poo
+  </div>
+</div>
+<h1 id="message2"></h1>
+<br/>
+
+<div class="progress">
+  <div id="playbar" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+  aria-valuemin="0" aria-valuemax="100" style="width:100%">
+    Play
+  </div>
+</div>
+<h1 id="message3"></h1>
+<br/>
+
+<div class="progress">
+  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    Sleep
+  </div>
+</div>
+<br/>
+<div id="action">
+  <p><span type="button" class="btn btn-success" onclick="Feed()">Feed</span></p>
+  <p><span type="button" class="btn btn-default" onclick="Toilet()">Toilet</span></p>
+  <p><span type="button" class="btn btn-danger" onclick="Play()">Play</span></p>
+  <p><span type="button" class="btn btn-primary" onclick="Sleep()">Sleep</span></p>
+</div>
+
+</div>
+</body>
+</html>

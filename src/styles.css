@@ -1,0 +1,16 @@
+img {
+  width: 225px;
+  height: 240px;
+}
+.progress-bar-warning{
+  background-color: red;
+}
+.progress-bar-info{
+  background-color: #f47442;
+}
+.progress-bar-success{
+  background-color: green;
+}
+.btn-default {
+  background-color: #f47442;
+}
