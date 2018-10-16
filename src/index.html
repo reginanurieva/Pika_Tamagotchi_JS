@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="bundle.js"></script>
+
   <title>Tamagotchi</title>
 </head>
 <body>
@@ -44,8 +44,8 @@
 </div>
 <br/>
 <div id="action">
-  <p><span type="button" class="btn btn-success" onclick="Feed()">Feed</span></p>
-  <p><span type="button" class="btn btn-default" onclick="Toilet()">Toilet</span></p>
+  <p><span id="health" type="button" class="btn btn-success">Feed</span></p>
+  <p><span id="poo" type="button" class="btn btn-default" onclick="newPoo()">Toilet</span></p>
   <p><span type="button" class="btn btn-danger" onclick="Play()">Play</span></p>
   <p><span type="button" class="btn btn-primary" onclick="Sleep()">Sleep</span></p>
 </div>

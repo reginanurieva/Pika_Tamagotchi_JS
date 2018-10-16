@@ -15,6 +15,10 @@ import { Tamagotchi} from "./tamagotchi.js";
 // });
 //225 224 for img
 let newTamago;
+// var Feed = function(){
+//   alert("Boo!");
+// }
+
 
 $(document).ready(function() {
   newTamago = new Tamagotchi();
@@ -48,6 +52,20 @@ $(document).ready(function() {
     $("#playbar").attr("style", "width:"+newTamago.play+"%")
   }, 1000);
 
+
+
+///buttons
+  $("#health").click(function(){
+    console.log("Boo!");
+    newTamago.newHealth();
+    $("#health").text(newTamago.getHealth());
+  });
+
+  $("#poo").click(function(){
+    newTamago.newPoo();
+    $("#poo").return(newTamago.getPoo());
+  });
+//
 });
 
 
