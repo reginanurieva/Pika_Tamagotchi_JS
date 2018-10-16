@@ -30,6 +30,8 @@ export class Tamagotchi
   //   return this.sleep;
   // }
 
+
+//FOOD
   setHealth () {
     const startInterval = setInterval(() => {
       if (this.dead || this.health < 1) {
@@ -38,7 +40,7 @@ export class Tamagotchi
       } else {
           this.health--;
       }
-    }, 500);
+    }, 100);
   }
 
   getHealth() {
@@ -49,7 +51,7 @@ export class Tamagotchi
     if (this.health >= 101) {
       this.health = 101;
     } else {
-      this.health++;
+      this.health+=10;
     }
   }
 
@@ -63,6 +65,10 @@ export class Tamagotchi
     }
   }
 
+  //end of food
+
+
+//Pooo
   setPoo () {
     const startInterval = setInterval(() => {
       if (this.dead || this.poo > 99) {
@@ -72,7 +78,7 @@ export class Tamagotchi
       } else {
           this.poo++;
       }
-    }, 1000);
+    }, 2000);
   }
 
 
@@ -81,7 +87,7 @@ export class Tamagotchi
   }
 
   newPoo() {
-    this.poo--;
+    this.poo-=20;
   }
 
 
@@ -93,6 +99,8 @@ export class Tamagotchi
       return "Your Pika pooped himself";
     }
   }
+
+  //end of poo
 
   // initializeGame() {
   //   let healthInterval;
@@ -120,28 +128,37 @@ export class Tamagotchi
 
 //when Pika is playing his health(foodLevel) and sleep decreases. When he eats his poop level increases. When he go to poop, his Health level will go up. SetInterval for poo should be longer than others. Cliking Toilet button will not affect any other functions. When his sleep level is full (when u hit the sleep button it would take 3 minutes to decompress(eventually)) it means that all other features will be restart and the Pika will be healthy and playful again. If one of the progress bars is full the process for others stop.
 
-  setPlay () {
-    const startInterval = setInterval(() => {
-      this.play--;
-      if(this.play < 1 || this.dead) {
-        this.dead = true;
-        clearInterval(startInterval);
+setPlay () {
+  const startInterval = setInterval(() => {
+    if (this.dead || this.play < 1) {
+      this.dead = true;
+      clearInterval(startInterval);
+    } else {
+        this.play--;
+    }
+  }, 500);
+}
 
-      }
-    }, 1000);
+  getPlay() {
+    return this.play;
   }
 
-  // getPlay() {
-  //   return this.play;
-  // }
-
-  bored () {
-    if(this.play > 0){
-      return false;
+  newPlay() {
+    if (this.play >= 101) {
+      this.play = 101;
     } else {
-      return "Your Pika got very bored with you and decided to die!";
+      this.play+=10;
     }
   }
+
+
+  // bored () {
+  //   if(this.play > 0){
+  //     return false;
+  //   } else {
+  //     return "Your Pika got very bored with you and decided to die!";
+  //   }
+  // }
 
   // setPoo: function() {
   //   const pooInterval = setInterval(()=>{
