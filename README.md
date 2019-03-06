@@ -5,9 +5,8 @@
 Tamagotchi game in JavaScript.  
 
 ## Specs
-1. The health levels of Pika are decreasing and you need to make sure that he is playing, eating and usin bathroom by pressing applicable button to increase or decrease the relevant progress bar.
-  * Example: "Ryan Hsi"
-  * Output Example:
+1. The health levels of Pika are decreasing and you need to make sure that he is playing, eating and using the bathroom by pressing applicable button to increase or decrease the relevant progress bar.
+
 2. If Pika is dead, you can refresh the page to continue playing(for sake of saving time current progress bars are having very short setInterval period, so Pika will be dying faster).
 
 ## Setup/Installation Requirements
@@ -26,6 +25,8 @@ npm install
 ```
 npm run start
 ```
+* Navigate to the localhost:8080
+
 
 ## Support and contact details
 
